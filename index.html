@@ -1,1 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TokoKu - Belanja Online Murah</title>
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- CSS Kustom -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container py-2">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <a href="#" class="logo">TokoKu</a>
+                </div>
+                <div class="col-md-6">
+                    <form class="d-flex" role="search">
+                        <input class="form-control search-bar" type="search" placeholder="Cari barang di sini..." aria-label="Search">
+                        <button class="btn btn-search" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="col-md-3 text-end">
+                    <a href="#" class="header-icon"><i class="fas fa-shopping-cart"></i> <span class="badge bg-danger" id="cart-count">0</span></a>
+                    <a href="#" class="header-icon"><i class="fas fa-bell"></i></a>
+                    <a href="#" class="header-icon"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Banner Carousel -->
+        <section id="main-banner" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#main-banner" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#main-banner" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#main-banner" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/1200x400/EE4D2D/FFFFFF?text=Promo+Akhir+Tahun" class="d-block w-100" alt="Promo 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/1200x400/00A8FF/FFFFFF?text=Flash+Sale+50%25" class="d-block w-100" alt="Promo 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/1200x400/34C759/FFFFFF?text=Gratis+Ongkir+Se-Indonesia" class="d-block w-100" alt="Promo 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#main-banner" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#main-banner" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </section>
+
+        <!-- Kategori -->
+        <section class="container my-4">
+            <h5>Kategori</h5>
+            <div class="row g-2">
+                <div class="col-2 text-center category-item">
+                    <i class="fas fa-mobile-alt fa-2x"></i>
+                    <p>Elektronik</p>
+                </div>
+                <div class="col-2 text-center category-item">
+                    <i class="fas fa-tshirt fa-2x"></i>
+                    <p>Fashion</p>
+                </div>
+                <div class="col-2 text-center category-item">
+                    <i class="fas fa-home fa-2x"></i>
+                    <p>Rumah Tangga</p>
+                </div>
+                <div class="col-2 text-center category-item">
+                    <i class="fas fa-dumbbell fa-2x"></i>
+                    <p>Olahraga</p>
+                </div>
+                <div class="col-2 text-center category-item">
+                    <i class="fas fa-book fa-2x"></i>
+                    <p>Buku</p>
+                </div>
+                <div class="col-2 text-center category-item">
+                    <i class="fas fa-gamepad fa-2x"></i>
+                    <p>Gaming</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flash Sale -->
+        <section class="container my-4 p-3 bg-light rounded">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0 text-danger"><i class="fas fa-bolt"></i> FLASH SALE</h5>
+                <div class="flash-timer">
+                    <span>Berakhir dalam:</span>
+                    <strong>01 : 23 : 45</strong>
+                </div>
+            </div>
+            <div class="d-flex overflow-auto">
+                <!-- Produk Flash Sale 1 -->
+                <div class="card product-card me-3 flex-shrink-0">
+                    <span class="discount-badge">52%</span>
+                    <img src="https://via.placeholder.com/150x150" class="card-img-top" alt="Produk 1">
+                    <div class="card-body">
+                        <p class="card-title product-name">Sepatu Olahraga Pria</p>
+                        <p class="card-text product-price">Rp 150.000</p>
+                        <small class="text-muted">Rp 310.000</small>
+                    </div>
+                </div>
+                <!-- Produk Flash Sale 2 -->
+                <div class="card product-card me-3 flex-shrink-0">
+                    <span class="discount-badge">30%</span>
+                    <img src="https://via.placeholder.com/150x150" class="card-img-top" alt="Produk 2">
+                    <div class="card-body">
+                        <p class="card-title product-name">Tas Ransel Wanita</p>
+                        <p class="card-text product-price">Rp 210.000</p>
+                        <small class="text-muted">Rp 300.000</small>
+                    </div>
+                </div>
+                <!-- Produk Flash Sale 3 -->
+                <div class="card product-card me-3 flex-shrink-0">
+                    <span class="discount-badge">65%</span>
+                    <img src="https://via.placeholder.com/150x150" class="card-img-top" alt="Produk 3">
+                    <div class="card-body">
+                        <p class="card-title product-name">Headset Bluetooth</p>
+                        <p class="card-text product-price">Rp 175.000</p>
+                        <small class="text-muted">Rp 500.000</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid Produk -->
+        <section class="container my-5">
+            <h5>Rekomendasi Untuk Anda</h5>
+            <div class="row g-3">
+                <!-- Produk 1 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card product-card h-100">
+                        <img src="https://via.placeholder.com/250x250" class="card-img-top" alt="Produk Grid 1">
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-title product-name">Mouse Gaming RGB</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <small>(120)</small>
+                            </div>
+                            <p class="card-text product-price mt-auto">Rp 125.000</p>
+                            <p class="card-text"><small>Terjual 2.1rb</small></p>
+                            <button class="btn btn-add-cart btn-sm mt-2">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produk 2 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card product-card h-100">
+                        <img src="https://via.placeholder.com/250x250" class="card-img-top" alt="Produk Grid 2">
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-title product-name">Jaket Denim Pria</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <small>(89)</small>
+                            </div>
+                            <p class="card-text product-price mt-auto">Rp 200.000</p>
+                            <p class="card-text"><small>Terjual 890</small></p>
+                            <button class="btn btn-add-cart btn-sm mt-2">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produk 3 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card product-card h-100">
+                        <img src="https://via.placeholder.com/250x250" class="card-img-top" alt="Produk Grid 3">
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-title product-name">Panci Set 5 Pcs</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <small>(250)</small>
+                            </div>
+                            <p class="card-text product-price mt-auto">Rp 450.000</p>
+                            <p class="card-text"><small>Terjual 450</small></p>
+                            <button class="btn btn-add-cart btn-sm mt-2">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produk 4 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card product-card h-100">
+                        <img src="https://via.placeholder.com/250x250" class="card-img-top" alt="Produk Grid 4">
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-title product-name">Novel Best Seller</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <small>(55)</small>
+                            </div>
+                            <p class="card-text product-price mt-auto">Rp 95.000</p>
+                            <p class="card-text"><small>Terjual 1.2rb</small></p>
+                            <button class="btn btn-add-cart btn-sm mt-2">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Tentang TokoKu</h5>
+                    <p>Platform belanja online terpercaya dengan harga termurah dan produk berkualitas.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Layanan Pelanggan</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Bantuan</a></li>
+                        <li><a href="#" class="text-white-50">Pengiriman</a></li>
+                        <li><a href="#" class="text-white-50">Pengembalian</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Ikuti Kami</h5>
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Metode Pembayaran</h5>
+                    <p>Kami menerima:</p>
+                    <i class="fab fa-cc-visa fa-2x me-1"></i>
+                    <i class="fab fa-cc-mastercard fa-2x me-1"></i>
+                    <i class="fab fa-cc-paypal fa-2x"></i>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center pb-3">
+                <p class="mb-0">&copy; 2024 TokoKu. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS Kustom -->
+    <script src="script.js"></script>
+</body>
+</html>
